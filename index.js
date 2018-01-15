@@ -6,7 +6,10 @@ function nestedTarget() {
   return document.querySelector('#nested .target');
 }
 
-function deepestChild(){}
+function deepestChild(){
+  const list = document.getElementById('grand-node').querySelectorAll('*');
+  return list[list.length -1].innerHTML;
+}
 
 function increaseRankBy(n){
 let rankList = document.querySelectorAll('ul.ranked-list li');
